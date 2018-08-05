@@ -1,0 +1,100 @@
+// Imports
+@import "fonts"
+@import "mixins"
+@import "navbar"
+@import "palette"
+
+// Commons
+body
+	font-family: $font-main
+
+a
+	color: $base-dark
+	transition: all 0.3s ease-in-out
+	&:hover, &:active, &:focus
+		color: $primary-color
+		text-decoration: underline
+
+hr
+	border: 1px solid $base-light
+	margin: 1rem 0
+	padding: 0
+	width: 100%
+
+.btn
+	background: rgba($base-light, 1)
+	border-radius: 5rem
+	border: none
+	box-shadow: 0 0.5rem 1.5rem rgba($base-dark, $b-shadow-opacity)
+	color: rgba($base-dark, 1)
+	padding: 15px 25px
+	text-transform: uppercase
+	transition: all 0.3s ease-in-out
+	&:hover
+		box-shadow: 0 0.5rem 3rem rgba($base-dark, $b-shadow-opacity)
+		margin: -4px auto 4px
+	&.btn-primary
+		background: rgba($base-dark, 1)
+		color: rgba($primary-color, 1)
+		&:hover
+			background: rgba($base-darker, 1)
+	&.btn-secondary
+		background: rgba($primary-color-light, 1)
+		color: rgba($base-dark, 1)
+		&:hover
+			background: rgba($primary-color, 1)
+
+// Intro section
+.countdown
+	background: $base-dark
+	color: rgba($primary-color, 1)
+	min-height: 100vh
+	min-width: 100%
+	.d-flex
+		min-height: 100vh
+	span
+		display: block
+		text-align: center
+		&.num
+			font-size: 3.5rem
+		&.title
+			color: $primary-color-light
+			font-size: 1rem
+
+// About section
+.jumbotron
+	margin: 0
+
+// Events section
+.events-section
+	background: $base-dark
+	color: rgba($base-light, 1)
+	display: flex
+	min-width: 100%
+	padding: 3rem 0
+	img
+		float: left
+		width: 100%
+	.col-12
+		img
+			@media( #{$bp-lg})
+				width: 30%
+			margin: 10px 15px 10px 0
+	.col-md-4
+		img
+			margin: 10px 0
+#Contact
+	hr
+		border: 1px solid $base-dark
+	
+	.col-lg-4
+		.social-icons
+			list-style: none
+			width: 100% !important
+			margin: 0
+			padding: 0
+			display: inline-block
+			position: relative
+			li
+				float: left
+				width: 20%
