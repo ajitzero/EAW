@@ -24,13 +24,15 @@
     color: #ffdb24; }
 
 body {
-  font-family: "Helvetica Neue", "Arvo", serif; }
+  font-family: "Helvetica Neue", "Arvo", serif;
+  overflow: hidden; }
 
 a {
   color: #222222;
   transition: all 0.3s ease-in-out; }
   a:hover, a:active, a:focus {
     color: #FFDB24;
+    outline: none;
     text-decoration: underline; }
 
 hr {
@@ -50,7 +52,8 @@ hr {
   transition: all 0.3s ease-in-out; }
   .btn:hover {
     box-shadow: 0 0.5rem 3rem rgba(34, 34, 34, 0.3);
-    margin: -4px auto 4px; }
+    margin-top: -4px;
+    margin-bottom: 4px; }
   .btn.btn-primary {
     background: #222222;
     color: #ffdb24; }
@@ -62,6 +65,42 @@ hr {
     .btn.btn-secondary:hover {
       background: #ffdb24; }
 
+::selection {
+  background: #FFEF9B; }
+
+::-moz-selection {
+  background: #FFEF9B; }
+
+#splash-screen {
+  background: #222222;
+  height: 100vh;
+  position: fixed;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  z-index: 9999; }
+  #splash-screen img {
+    width: 70%; }
+
+.pulse {
+  animation: pulse 1.5s infinite;
+  animation-direction: alternate;
+  -webkit-animation-name: pulse;
+  animation-name: pulse; }
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(1); }
+  50% {
+    -webkit-transform: scale(1.05); }
+  100% {
+    -webkit-transform: scale(1); } }
+@keyframes pulse {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.05); }
+  100% {
+    transform: scale(1); } }
 #About, #Events, #Contact {
   padding-top: 6rem;
   padding-bottom: 3.5rem; }
@@ -89,32 +128,37 @@ hr {
 .events-section {
   background: #222222;
   color: #fffcf5;
-  display: flex;
   min-width: 100%; }
   .events-section img {
     float: left;
     width: 100%; }
-  .events-section .col-12 img {
-    margin: 10px 15px 10px 0; }
+  .events-section .col-12 > img {
+    margin: 0 15px 20px 0; }
 @media( min-width: 992px) {
-  .events-section .col-12 img {
+  .events-section .col-12 > img {
     width: 30%; } }
-  .events-section .col-md-4 img {
-    margin: 10px 0; }
+  .events-section .col-md-3 > img {
+    margin: 20px 0; }
 
 #Contact hr {
   border: 1px solid #222222;
   margin: 3.5rem auto 1rem;
   padding: 0;
   width: 85%; }
-#Contact .col-lg-4 .social-icons {
+#Contact .col-lg-6 .btn {
+  margin-bottom: 1.5rem; }
+@media( min-width: 992px) {
+  #Contact .col-lg-6 .btn {
+    float: left;
+    margin: 1rem; } }
+#Contact .col-lg-6 .social-icons {
   display: inline-block;
   list-style: none;
   margin: 0;
   padding: 0;
   position: relative;
   width: 100% !important; }
-  #Contact .col-lg-4 .social-icons li {
+  #Contact .col-lg-6 .social-icons li {
     float: left;
     width: 16.6666666667%; }
 

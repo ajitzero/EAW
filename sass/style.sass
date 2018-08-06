@@ -7,12 +7,14 @@
 // Commons
 body
 	font-family: $font-main
+	overflow: hidden
 
 a
 	color: $base-dark
 	transition: all 0.3s ease-in-out
 	&:hover, &:active, &:focus
 		color: $primary-color
+		outline: none
 		text-decoration: underline
 
 hr
@@ -32,7 +34,8 @@ hr
 	transition: all 0.3s ease-in-out
 	&:hover
 		box-shadow: 0 0.5rem 3rem rgba($base-dark, $b-shadow-opacity)
-		margin: -4px auto 4px
+		margin-top: -4px
+		margin-bottom: 4px
 	&.btn-primary
 		background: rgba($base-dark, 1)
 		color: rgba($primary-color, 1)
@@ -43,6 +46,46 @@ hr
 		color: rgba($base-dark, 1)
 		&:hover
 			background: rgba($primary-color, 1)
+
+// Highlights
+::selection
+	background: $primary-color-light
+
+::-moz-selection
+	background: $primary-color-light
+
+// Splash screen
+#splash-screen
+	background: $base-dark
+	height: 100vh
+	position: fixed
+	transition: all 0.3s ease-in-out
+	width: 100%
+	z-index: 9999
+	img
+		width: 70%
+
+.pulse
+	animation: pulse 1.5s infinite
+	animation-direction: alternate
+	-webkit-animation-name: pulse
+	animation-name: pulse
+
+@-webkit-keyframes pulse
+	0%
+		-webkit-transform: scale(1)
+	50%
+		-webkit-transform: scale(1.05)
+	100%
+		-webkit-transform: scale(1)
+
+@keyframes pulse
+	0%
+		transform: scale(1)
+	50%
+		transform: scale(1.05)
+	100%
+		transform: scale(1)
 
 #About, #Events, #Contact
 	padding-top: 6rem
@@ -74,19 +117,20 @@ hr
 .events-section
 	background: $base-dark
 	color: rgba($base-light, 1)
-	display: flex
+	// display: flex
 	min-width: 100%
 	img
 		float: left
 		width: 100%
 	.col-12
-		img
+		& > img
 			@media( #{$bp-lg})
 				width: 30%
-			margin: 10px 15px 10px 0
-	.col-md-4
-		img
-			margin: 10px 0
+			margin: 0 15px 20px 0
+	.col-md-3
+		& > img
+			margin: 20px 0
+
 #Contact
 	hr
 		border: 1px solid $base-dark
@@ -94,7 +138,12 @@ hr
 		padding: 0
 		width: 85%
 	
-	.col-lg-4
+	.col-lg-6
+		.btn
+			margin-bottom: 1.5rem
+			@media( #{$bp-lg})
+				float: left
+				margin: 1rem
 		.social-icons
 			display: inline-block
 			list-style: none

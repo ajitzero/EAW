@@ -1,34 +1,5 @@
 $(function() {
 
-	// Countdown Timer setup
-	var countDownDate = new Date("Aug 6, 2018 18:00:00").getTime();
-	var DAY = $("#cday");
-	var HOUR = $("#chr");
-	var MIN = $("#cmin");
-	var SEC = $("#csec");
-
-	var countDownTimer = setInterval(function() {
-
-		var now = new Date().getTime();
-		var distance = countDownDate - now;
-		var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-		var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-		var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-		var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-		DAY.text(days);
-		HOUR.text(hours);
-		MIN.text(minutes);
-		SEC.text(seconds);
-
-		if (distance < 0) {
-			clearInterval(countDownTimer);
-			$("#countDownBlock")
-				.empty()
-				.append('<div class="p-4 display-3">Welcome to EAW!</div>').fadeIn();
-		}
-	}, 1000);
-
 	// resize logo on scroll >= 100
 	var navbar_logo = $(".navbar-brand");
 	var logo_width_old = navbar_logo.css("width")
@@ -75,6 +46,7 @@ $(function() {
 			.parent().addClass("active");
 	});
 
+	// Close navbar on click
 	$('.nav-link').on('click', function() {
 		$('.navbar-collapse').collapse('hide');
 	});
