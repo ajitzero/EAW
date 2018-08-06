@@ -44,9 +44,14 @@ hr
 		&:hover
 			background: rgba($primary-color, 1)
 
+#About, #Events, #Contact
+	padding-top: 6rem
+	padding-bottom: 3.5rem
+
 // Intro section
 .countdown
 	background: $base-dark
+	background-image: url()
 	color: rgba($primary-color, 1)
 	min-height: 100vh
 	min-width: 100%
@@ -56,10 +61,10 @@ hr
 		display: block
 		text-align: center
 		&.num
-			font-size: 3.5rem
+			font-size: 3.25rem
 		&.title
 			color: $primary-color-light
-			font-size: 1rem
+			font-size: 0.75rem
 
 // About section
 .jumbotron
@@ -71,7 +76,6 @@ hr
 	color: rgba($base-light, 1)
 	display: flex
 	min-width: 100%
-	padding: 3rem 0
 	img
 		float: left
 		width: 100%
@@ -86,15 +90,18 @@ hr
 #Contact
 	hr
 		border: 1px solid $base-dark
+		margin: 3.5rem auto 1rem
+		padding: 0
+		width: 85%
 	
 	.col-lg-4
 		.social-icons
+			display: inline-block
 			list-style: none
-			width: 100% !important
 			margin: 0
 			padding: 0
-			display: inline-block
 			position: relative
+			width: 100% !important
 			li
 				float: left
-				width: 20%
+				width: 16.6666666667%

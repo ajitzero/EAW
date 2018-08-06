@@ -1,21 +1,27 @@
 @import url("https://fonts.googleapis.com/css?family=Arvo:400,700");
 .navbar .navbar-brand {
-  width: 6rem;
-  transition: width 0.3s ease; }
+  padding: 10px;
+  transition: all 0.3s ease;
+  width: 15rem; }
+.navbar .nav-link {
+  border-bottom: 1px solid #222222;
+  transition: all 0.3s ease; }
 .navbar .navbar-toggler {
   border: none;
   outline: none; }
   .navbar .navbar-toggler .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 219, 36, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); }
 
+.active {
+  border-bottom: 1px solid #FFDB24; }
+
 .navbar {
-  text-align: center;
-  background-color: #222222; }
+  background-color: #222222;
+  text-align: center; }
   .navbar .navbar-nav .nav-link {
     color: #ffef9b; }
-
-.navbar .nav-item.active .nav-link, .navbar .nav-item:hover .nav-link {
-  color: #ffdb24; }
+  .navbar .nav-item.active .nav-link, .navbar .nav-item:hover .nav-link {
+    color: #ffdb24; }
 
 body {
   font-family: "Helvetica Neue", "Arvo", serif; }
@@ -56,8 +62,13 @@ hr {
     .btn.btn-secondary:hover {
       background: #ffdb24; }
 
+#About, #Events, #Contact {
+  padding-top: 6rem;
+  padding-bottom: 3.5rem; }
+
 .countdown {
   background: #222222;
+  background-image: url();
   color: #ffdb24;
   min-height: 100vh;
   min-width: 100%; }
@@ -67,10 +78,10 @@ hr {
     display: block;
     text-align: center; }
     .countdown span.num {
-      font-size: 3.5rem; }
+      font-size: 3.25rem; }
     .countdown span.title {
       color: #FFEF9B;
-      font-size: 1rem; }
+      font-size: 0.75rem; }
 
 .jumbotron {
   margin: 0; }
@@ -79,8 +90,7 @@ hr {
   background: #222222;
   color: #fffcf5;
   display: flex;
-  min-width: 100%;
-  padding: 3rem 0; }
+  min-width: 100%; }
   .events-section img {
     float: left;
     width: 100%; }
@@ -93,16 +103,19 @@ hr {
     margin: 10px 0; }
 
 #Contact hr {
-  border: 1px solid #222222; }
+  border: 1px solid #222222;
+  margin: 3.5rem auto 1rem;
+  padding: 0;
+  width: 85%; }
 #Contact .col-lg-4 .social-icons {
+  display: inline-block;
   list-style: none;
-  width: 100% !important;
   margin: 0;
   padding: 0;
-  display: inline-block;
-  position: relative; }
+  position: relative;
+  width: 100% !important; }
   #Contact .col-lg-4 .social-icons li {
     float: left;
-    width: 20%; }
+    width: 16.6666666667%; }
 
 /*# sourceMappingURL=style.css.map */

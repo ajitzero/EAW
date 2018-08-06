@@ -28,7 +28,7 @@
 	<!-- Twitter Summary card images must be at least 120x120px -->
 	<!-- <meta name="twitter:image" content="http://www.example.com/image.jpg"> -->
 
-	<title>Entrepreneurship Awareness Week | EAW | GCIED</title>
+	<title>Entrepreneurship Awareness Week | E.A.W. | G.C.I.E.D.</title>
 
 	<!-- CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
@@ -41,7 +41,7 @@
 
 	<!-- Navbar section ================================================== -->
 	<nav class="navbar navbar-expand-md fixed-top">
-		<img class="navbar-brand" src="assets/brand/logo-gcied.png" alt="GCIED EAW">
+		<img class="navbar-brand" src="assets/brand/logo-gcied-eaw-white.png" alt="GCIED EAW">
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#PrimaryMenu" aria-controls="PrimaryMenu" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
@@ -49,17 +49,18 @@
 		<div id="PrimaryMenu" class="collapse navbar-collapse">
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item active">
-					<a class="nav-link" href="#Home">Home <span class="sr-only">(current)</span></a>
+					<!-- <span class="sr-only">(current)</span> -->
+					<a class="nav-link" href="#Home">Home</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#About">About Us</a>
+					<a class="nav-link" href="#About">About</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="#Events">Events</a>
 				</li>
-				<li class="nav-item">
+				<!-- <li class="nav-item">
 					<a class="nav-link" href="#Sponsors">Sponsors</a>
-				</li>
+				</li> -->
 				<li class="nav-item">
 					<a class="nav-link" href="#Contact">Contact</a>
 				</li>
@@ -72,21 +73,21 @@
 		<!-- Intro section ================================================== -->
 		<div class="container-fluid countdown">
 			<!-- Add countdown timer -->
-			<div class="d-flex flex-column flex-lg-row align-items-center align-items-lg-center justify-content-end justify-content-lg-center">
+			<div id="countDownBlock" class="d-flex flex-column flex-lg-row align-items-center align-items-lg-center justify-content-end justify-content-lg-center">
 				<div class="pl-3 pr-3">
-					<span class="num">00</span>
+					<span id="cday" class="num">0</span>
 					<span class="title">DAYS</span>
 				</div>
 				<div class="pl-3 pr-3">
-					<span class="num">00</span>
+					<span id="chr" class="num">0</span>
 					<span class="title">HOURS</span>
 				</div>
 				<div class="pl-3 pr-3">
-					<span class="num">00</span>
+					<span id="cmin" class="num">0</span>
 					<span class="title">MINUTES</span>
 				</div>
 				<div class="pl-3 pr-3">
-					<span class="num">00</span>
+					<span id="csec" class="num">0</span>
 					<span class="title">SECONDS</span>
 				</div>
 				<div>...</div>
@@ -185,9 +186,10 @@
 				<h1 class="display-5 pt-4 pb-4">Contact Us</h1>
 				<address>
 					<strong>GCIED</strong><br>
-					Room 105, <br>
-					Arthur Cotton Bhawan, <br>
-					GITAM (Deemed to be University)
+					Room No. 105, <br>
+					Sir Arthur Cotton Bhavan, <br>
+					GITAM (Deemed to be University),
+					Visakhapatnam, India
 				</address>
 				
 				<a href="https://goo.gl/maps/NdqfnnL6hEn" target="_blank" class="btn btn-secondary">Get Directions</a>
@@ -211,15 +213,24 @@
 					<li>
 						<a href="https://www.linkedin.com/in/gitam-centre-for-incubation-and-entrepreneurship-development-a4a6a5168/" target="_blank" class="nav-link"><i class="fa fa-linkedin fa-lg"></i></a>
 					</li>
+					<li>
+						<a href="mailto:teamgcied@gmail.com" target="_blank" class="nav-link"><i class="fa fa-envelope fa-lg"></i></a>
+					</li>
 				</ul>
+				<a href="mailto:teamgcied@gmail.com" target="_blank" class="btn btn-secondary"> Email Us</a>
+				<br>
+				<br>
 				<a href="https://gcied.gitam.edu/" target="_blank" class="btn btn-primary">Visit GCIED's Official Website</a>
 			</div>
 		</div>
 		
 			
 		<div class="row">
+			<div class="col-12 text-center">
+				
 				<hr>
 				<p>&copy; <a href="https://gcied.gitam.edu/" target="_blank">GCIED</a> 2018-Present</p>
+			</div>
 		</div>
 	</footer>
 
