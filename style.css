@@ -150,7 +150,9 @@ hr {
 @media( min-width: 992px) {
   #Contact .col-lg-6 .btn {
     float: left;
-    margin: 1rem; } }
+    margin: 0 1rem 1rem; }
+    #Contact .col-lg-6 .btn:hover {
+      margin: -4px 1rem 1rem; } }
 #Contact .col-lg-6 .social-icons {
   display: inline-block;
   list-style: none;
