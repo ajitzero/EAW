@@ -9,6 +9,34 @@ body
 	font-family: $font-main
 	overflow: hidden
 
+#bgplayvideo
+	position: fixed
+	border: none
+	top: 50%
+	left: 50%
+	min-width: 100%
+	min-height: 100%
+	width: auto
+	height: auto
+	z-index: -100
+	transform: translateX(-50%) translateY(-50%)
+	// background: url('/assets/') no-repeat
+	background-size: cover
+
+.i-block
+	background: none
+	flex-direction: column
+	color: rgba($primary-color-light, 1)
+	min-height: 100vh
+	min-width: 100%
+
+.i-subtitle
+	text-transform: uppercase
+	color: rgba($primary-color-light, 0.75)
+
+.i-title
+	text-align: left
+
 a
 	color: $base-dark
 	transition: all 0.3s ease-in-out
@@ -93,13 +121,12 @@ hr
 
 // Intro section
 .countdown
-	background: $base-dark
-	background-image: url()
+	background: rgba($base-dark, 0.6)
 	color: rgba($primary-color, 1)
-	min-height: 100vh
 	min-width: 100%
+	min-height: 50vh
 	.d-flex
-		min-height: 100vh
+		min-height: 50vh
 	span
 		display: block
 		text-align: center
@@ -132,6 +159,7 @@ hr
 			margin: 20px 0
 
 #Contact
+	background: $base-light
 	hr
 		border: 1px solid $base-dark
 		margin: 3.5rem auto 1rem

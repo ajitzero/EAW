@@ -3,7 +3,7 @@ $(function() {
 	// resize logo on scroll >= 100
 	var navbar_logo = $(".navbar-brand");
 	var logo_width_old = navbar_logo.css("width")
-	var logo_background_old = navbar_logo.css("background-color")
+	// var logo_background_old = navbar_logo.css("background-color")
 
 	// update `.active` for current menu area
 	var topMenu = $("#PrimaryMenu"),
@@ -22,12 +22,13 @@ $(function() {
 		if ($(this).scrollTop() >= 100) {
 			navbar_logo.css({
 				'width': '12rem',
-				'background-color': logo_background_old
+				'background-color': 'rgba(#222222, 1)'
 			});
 		} else {
 			navbar_logo.css({
 				'width': logo_width_old,
-				'background-color': 'none'
+				'background-color': 'rgba(#222222, 0.25)'
+				// 'background-color': 'none'
 			});
 		}
 

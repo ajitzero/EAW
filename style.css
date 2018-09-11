@@ -16,16 +16,43 @@
   border-bottom: 1px solid #FFDB24; }
 
 .navbar {
-  background-color: #222222;
+  background-color: rgba(34, 34, 34, 0.25);
   text-align: center; }
   .navbar .navbar-nav .nav-link {
-    color: #ffef9b; }
+    color: #ffdb24; }
   .navbar .nav-item.active .nav-link, .navbar .nav-item:hover .nav-link {
     color: #ffdb24; }
 
 body {
   font-family: "Helvetica Neue", "Arvo", serif;
   overflow: hidden; }
+
+#bgplayvideo {
+  position: fixed;
+  border: none;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translateX(-50%) translateY(-50%);
+  background-size: cover; }
+
+.i-block {
+  background: none;
+  flex-direction: column;
+  color: #ffef9b;
+  min-height: 100vh;
+  min-width: 100%; }
+
+.i-subtitle {
+  text-transform: uppercase;
+  color: rgba(255, 239, 155, 0.75); }
+
+.i-title {
+  text-align: left; }
 
 a {
   color: #222222;
@@ -106,13 +133,12 @@ hr {
   padding-bottom: 3.5rem; }
 
 .countdown {
-  background: #222222;
-  background-image: url();
+  background: rgba(34, 34, 34, 0.6);
   color: #ffdb24;
-  min-height: 100vh;
-  min-width: 100%; }
+  min-width: 100%;
+  min-height: 50vh; }
   .countdown .d-flex {
-    min-height: 100vh; }
+    min-height: 50vh; }
   .countdown span {
     display: block;
     text-align: center; }
@@ -140,28 +166,30 @@ hr {
   .events-section .col-md-3 > img {
     margin: 20px 0; }
 
-#Contact hr {
-  border: 1px solid #222222;
-  margin: 3.5rem auto 1rem;
-  padding: 0;
-  width: 85%; }
-#Contact .col-lg-6 .btn {
-  margin-bottom: 1.5rem; }
+#Contact {
+  background: #FFFCF5; }
+  #Contact hr {
+    border: 1px solid #222222;
+    margin: 3.5rem auto 1rem;
+    padding: 0;
+    width: 85%; }
+  #Contact .col-lg-6 .btn {
+    margin-bottom: 1.5rem; }
 @media( min-width: 992px) {
   #Contact .col-lg-6 .btn {
     float: left;
     margin: 0 1rem 1rem; }
     #Contact .col-lg-6 .btn:hover {
       margin: -4px 1rem 1rem; } }
-#Contact .col-lg-6 .social-icons {
-  display: inline-block;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  position: relative;
-  width: 100% !important; }
-  #Contact .col-lg-6 .social-icons li {
-    float: left;
-    width: 16.6666666667%; }
+  #Contact .col-lg-6 .social-icons {
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 100% !important; }
+    #Contact .col-lg-6 .social-icons li {
+      float: left;
+      width: 16.6666666667%; }
 
 /*# sourceMappingURL=style.css.map */
