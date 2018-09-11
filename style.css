@@ -52,7 +52,7 @@ body {
   color: rgba(255, 239, 155, 0.75); }
 
 .i-title {
-  text-align: left; }
+  text-shadow: 0 5px 15px rgba(34, 34, 34, 0.6); }
 
 a {
   color: #222222;
