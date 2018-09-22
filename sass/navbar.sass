@@ -2,29 +2,23 @@
 
 // Custom navbar settings
 .navbar
+	background: rgba($base-dark, 0.25)
+	text-align: center
+	transition: all 0.3s ease
 	.navbar-brand
 		padding: 10px
 		transition: all 0.3s ease
 		width: 15rem
-	.nav-link
-		border-bottom: 1px solid $base-dark
-		transition: all 0.3s ease
 	.navbar-toggler
 		border: none
 		outline: none
 		.navbar-toggler-icon
 			background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 219, 36, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E")
+	.nav-link
+		border-bottom: 1px solid $base-dark
+	.navbar-nav, .nav-item.active, .nav-item:hover
+		.nav-link
+			color: rgba($primary-color, 1)
 
 .active
 	border-bottom: 1px solid $primary-color
-
-.navbar
-	background-color: rgba($base-dark, 0.25)
-	text-align: center
-	.navbar-nav
-		.nav-link
-			color: rgba($primary-color, 1)
-			// color: rgba($primary-color-light, 1)
-	.nav-item.active, .nav-item:hover
-		.nav-link
-			color: rgba($primary-color, 1)
