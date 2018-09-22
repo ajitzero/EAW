@@ -155,10 +155,10 @@ hr {
   .events-section img {
     float: left;
     width: 100%; }
-  .events-section .col-12 > img {
+  .events-section .col-8 > img, .events-section .col-12 > img {
     margin: 0 15px 20px 0; }
 @media( min-width: 992px) {
-  .events-section .col-12 > img {
+  .events-section .col-8 > img, .events-section .col-12 > img {
     width: 30%; } }
   .events-section .col-md-3 > img {
     margin: 20px 0; }
